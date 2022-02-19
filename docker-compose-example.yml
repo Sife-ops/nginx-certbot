@@ -10,4 +10,8 @@ services:
     ports:
       - 80:80
       - 443:443
-
+    networks:
+      - example_default
+networks:
+  example_default:
+    external: true
