@@ -1,5 +1,5 @@
 services:
-  web:
+  proxy:
     image: nginx:stable-alpine
     restart: always
     volumes: 
