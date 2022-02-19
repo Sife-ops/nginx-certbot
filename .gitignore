@@ -1,3 +1,4 @@
-dhparam/
-certbot/
 .env
+certbot/
+dhparam/
+docker-compose.yml
