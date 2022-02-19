@@ -11,7 +11,7 @@ services:
       - 443:443
   certbot:
     image: certbot/certbot:latest
-    command: certonly --webroot --webroot-path=/usr/share/nginx/html/letsencrypt --email wyatt.goettsch@gmail.com --agree-tos --no-eff-email -d soyless.xyz
+    command: certonly --webroot --webroot-path=/usr/share/nginx/html/letsencrypt --email ${CERTBOT_EMAIL?err} --agree-tos --no-eff-email -d ${CERTBOT_DOMAIN?err}
     volumes:
       - ./certbot/conf:/etc/letsencrypt
       - ./certbot/logs:/var/log/letsencrypt
