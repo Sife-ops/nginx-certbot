@@ -9,4 +9,4 @@ fi
 
 sed "/server_name/ s/<++>/${CERTBOT_DOMAIN}/" ./nginx-template/default-certbot.conf > ./nginx-certbot/default.conf
 
-docker-compose -f ./docker-compose-certbot.yml up
+docker-compose -f ./docker-compose-certbot.yml up ${1}
