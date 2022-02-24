@@ -7,7 +7,7 @@ fi
 
 . ./.env
 
-if ! readlink -f ./dhparam/dhparam-2048 ; then
+if ! stat ./dhparam 1>/dev/null 2>&1 ; then
     mkdir ./dhparam
     openssl dhparam -out ./dhparam/dhparam-2048.pem 2048
 fi
